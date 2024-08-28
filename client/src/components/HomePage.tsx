@@ -1,6 +1,5 @@
 import React from "react";
-import { FcLike } from "react-icons/fc";
-import { FaCommentAlt } from "react-icons/fa";
+
 const HomePage = () => {
   const posts = [
     {
@@ -61,7 +60,8 @@ const HomePage = () => {
 
   return (
     <>
-      <section className="stories">
+      
+      <section className="stories bg-gray-900 text-white py-6">
         <div className="stories__single">
           <div className="stories__single__img-holder">
             <div
@@ -151,35 +151,36 @@ const HomePage = () => {
           <p className="stories__single__description">#skater girl</p>
         </div>
       </section>
-     
-      <section className="">
+      
+      <section className="bg-gray-900 text-white py-6">
         <div className="post-area px-4">
-          {posts.map((post) => {
-            return (
-              <div className="post-main  border rounded-lg shadow-lg mt-10">
-                <div className="post-header">
-                  <div className="post-left-header">
-                    <div className="post-image">
-                      <img src={post.profileImage} alt="" />
+          {posts.map((post, index) => (
+            <div key={index} className="post-main border border-gray-700 rounded-lg shadow-lg bg-gray-800 mt-10">
+              <div className="post-header flex items-center p-4">
+                <div className="post-left-header flex items-center space-x-3">
+                  <div className="post-image">
+                    <img className="w-12 h-12 rounded-full" src={post.profileImage} alt="" />
+                  </div>
+                  <div>
+                    <p className="post-username text-lg font-semibold">{post.username}</p>
+                    <div className="flex items-center space-x-2 text-gray-400">
+                      <i className="fa-solid fa-certificate"></i>
+                      <span className="one-day">{post.timeAgo}</span>
                     </div>
-                    <p className="post-username">{post.username}</p>
-                    <i className="fa-solid fa-certificate"></i>
-                    <span className="one-day">{post.timeAgo} </span>
                   </div>
                 </div>
-                <div className="post-main-image">
-                  <img src={post.postImage} alt="" />
-                </div>
-
-                <div className="post-description p-2">
-                  <p className="title text-sm font-bold">
-                    {post.postText}
-                    <br /> read more
-                  </p>
-                </div>
               </div>
-            );
-          })}
+              <div className="post-main-image">
+                <img className="w-full rounded-b-lg" src={post.postImage} alt="" />
+              </div>
+              <div className="post-description p-4">
+                <p className="title text-sm font-bold text-gray-300">
+                  {post.postText}
+                  <br /> read more
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </>
