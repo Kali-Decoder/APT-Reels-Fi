@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CChart } from "@coreui/react-chartjs";
 import Modal from "./InvestModal";
 
+
 interface ProfileStats {
   posts: string;
   investors: string;
@@ -107,7 +108,7 @@ const Profile: React.FC = () => {
         <p className="text-gray-400">{profileData.description}</p>
       </section>
 
-      <section className="actions mt-4 flex space-x-2">
+      <section className="px-4 mt-4 flex items-center justify-between space-x-2">
         <button
           onClick={openModal}
           className="bg-blue-700 text-white py-2 px-4 rounded-lg"
@@ -127,25 +128,25 @@ const Profile: React.FC = () => {
             plugins: {
               legend: {
                 labels: {
-                  color: "#E5E7EB", // Light grey for better contrast on dark background
+                  color: "#E5E7EB", 
                 },
               },
             },
             scales: {
               x: {
                 grid: {
-                  color: "#4B5563", // Dark grey gridlines
+                  color: "#4B5563", 
                 },
                 ticks: {
-                  color: "#93C5FD", // Light blue for x-axis labels
+                  color: "#93C5FD", 
                 },
               },
               y: {
                 grid: {
-                  color: "#4B5563", // Dark grey gridlines
+                  color: "#4B5563", 
                 },
                 ticks: {
-                  color: "#F87171", // Light red for y-axis labels
+                  color: "#F87171", 
                 },
               },
             },
