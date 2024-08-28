@@ -1,165 +1,147 @@
-import React from 'react'
-import { IoIosAirplane} from "react-icons/io";
+import React, { useState } from 'react';
+import { IoIosAirplane, IoIosCheckmarkCircle } from "react-icons/io";
 import { FaRegLightbulb } from "react-icons/fa";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { MdOutlineSportsCricket } from "react-icons/md";
-import { IoIosCheckmarkCircle } from "react-icons/io";
-const Explore = () => {
-  const roles = [
-    {
-      id: 1,
-      title: "bloggers",
-      icon: <IoIosAirplane size={30}/>,
-    },
-    {
-      id: 2,
-      title: "brand ambassadors",
-      icon: <FaRegLightbulb size={30}/>,
-    },
-    {
-      id: 3,
-      title: "copywriters",
-      icon: <AiOutlineCheckCircle size={30}/>,
-    },
-    {
-      id: 4,
-      title: "graphic designers",
-      icon: <HiOutlineLightBulb size={30}/>,
-    },
-    {
-      id: 5,
-      title: "influencers",
-      icon: <MdOutlineSportsCricket size={30}/>,
-    },
-    {
-      id: 6,
-      title: "photographers",
-      icon: <HiOutlineLightBulb size={30}/>,
-    },
-    {
-      id: 7,
-      title: "podcasters",
-      icon: <IoIosCheckmarkCircle size={30}/>,
-    },
-    {
-      id: 8,
-      title: "social media managers",
-      icon: <IoIosCheckmarkCircle size={30}/>,
-    },
-    {
-      id: 9,
-      title: "streamers",
-      icon: <IoIosCheckmarkCircle size={30}/>,
-    },
-    {
-      id: 10,
-      title: "videographers",
-      icon: <IoIosCheckmarkCircle size={30}/>,
-    },
-    {
-      id: 11,
-      title: "vloggers",
-      icon: <IoIosCheckmarkCircle size={30}/>,
-    },
-  ];
+import ProfileCard from './UserProfileCard';
 
-  return (
-    <>
-          <div className="flex justify-center items-center flex-col border">
-        <div className="relative my-4 flex h-full flex-col w-[85%] overflow-hidden rounded-2xl bg-white text-gray-600 ring-1 ring-gray-200">
-          <div className="border-b p-6">
-            <h6 className="mb-2 text-base font-semibold">How Platform Works</h6>
-          </div>
-          <div className="flex-auto p-6">
-            <div className="relative flex flex-col justify-center">
-              <div className="absolute left-4 h-full border-r-2"></div>
-              <div className="relative mb-4">
-                <span className="absolute inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 p-4 text-center text-base font-semibold text-white shadow">
-                  A
-                </span>
-                <div className="ml-12 w-auto pt-1">
-                  <h6 className="text-sm font-semibold text-blue-900">
-                    $2400, Design changes
-                  </h6>
-                  <p className="mt-1 text-xs text-gray-500">22 DEC 7:20 PM</p>
-                </div>
-              </div>
-              <div className="relative mb-4">
-                <span className="absolute inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 p-4 text-center text-base font-semibold text-white shadow">
-                  B
-                </span>
-                <div className="ml-12 w-auto pt-1">
-                  <h6 className="text-sm font-semibold text-blue-900">
-                    New order #1832412
-                  </h6>
-                  <p className="mt-1 text-xs text-gray-500">21 DEC 11 PM</p>
-                </div>
-              </div>
-              <div className="relative mb-4">
-                <span className="absolute inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 p-4 text-center text-base font-semibold text-white shadow">
-                  C
-                </span>
-                <div className="ml-12 w-auto pt-1">
-                  <h6 className="text-sm font-semibold text-blue-900">
-                    Server payments for April
-                  </h6>
-                  <p className="mt-1 text-xs text-gray-500">21 DEC 9:34 PM</p>
-                </div>
-              </div>
-              <div className="relative mb-4">
-                <span className="absolute inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 p-4 text-center text-base font-semibold text-white shadow">
-                  D
-                </span>
-                <div className="ml-12 w-auto pt-1">
-                  <h6 className="text-sm font-semibold text-blue-900">
-                    Server payments for April
-                  </h6>
-                  <p className="mt-1 text-xs text-gray-500">21 DEC 9:34 PM</p>
-                </div>
-              </div>
-              <div className="relative mb-4">
-                <span className="absolute inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 p-4 text-center text-base font-semibold text-white shadow">
-                  E
-                </span>
-                <div className="ml-12 w-auto pt-1">
-                  <h6 className="text-sm font-semibold text-blue-900">
-                    Server payments for April
-                  </h6>
-                  <p className="mt-1 text-xs text-gray-500">21 DEC 9:34 PM</p>
-                </div>
-              </div>
-              <div className="relative mb-4">
-                <span className="absolute inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 p-4 text-center text-base font-semibold text-white shadow">
-                  F
-                </span>
-                <div className="ml-12 w-auto pt-1">
-                  <h6 className="text-sm font-semibold text-blue-900">
-                    Server payments for April
-                  </h6>
-                  <p className="mt-1 text-xs text-gray-500">21 DEC 9:34 PM</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-[85%] mx-auto">
-          <div className="rounded-lg border border-gray-200 bg-white py-2 px-3">
-            <nav className="flex flex-wrap gap-2">
-              {roles.map((role, index) => (
-                <li
-                  key={index}
-                  
-                  className="whitespace-nowrap flex items-center rounded-lg py-2 px-3 text-sm uppercase font-medium text-gray-600 transition-all duration-200 ease-in-out hover:bg-gray-200 hover:text-gray-900"
-                >
-                 <span className="mx-4 text-blue-500">{role.icon}</span> {role.title}
-                </li>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </div></>
-  )
+interface PlatformStep {
+  id: string;
+  title: string;
+  date: string;
 }
 
-export default Explore
+interface Role {
+  id: number;
+  title: string;
+  icon: JSX.Element;
+}
+
+interface Profile {
+  id: number;
+  name: string;
+  username: string;
+  bio: string;
+  avatarUrl: string;
+  followers: number;
+  following: number;
+  role: string;
+}
+
+const platformSteps: PlatformStep[] = [
+  { id: 'A', title: "Design changes", date: "22 DEC 7:20 PM" },
+  { id: 'B', title: "New order #1832412", date: "21 DEC 11 PM" },
+  { id: 'C', title: "Server payments for April", date: "21 DEC 9:34 PM" },
+  { id: 'D', title: "Server payments for April", date: "21 DEC 9:34 PM" },
+  { id: 'E', title: "Server payments for April", date: "21 DEC 9:34 PM" },
+  { id: 'F', title: "Server payments for April", date: "21 DEC 9:34 PM" }
+];
+
+const roles: Role[] = [
+  { id: 0, title: "All", icon: <IoIosCheckmarkCircle size={30}/> },
+  { id: 1, title: "bloggers", icon: <IoIosAirplane size={30}/> },
+  { id: 2, title: "brand ambassadors", icon: <FaRegLightbulb size={30}/> },
+  { id: 3, title: "copywriters", icon: <AiOutlineCheckCircle size={30}/> },
+  { id: 4, title: "graphic designers", icon: <HiOutlineLightBulb size={30}/> },
+  { id: 5, title: "influencers", icon: <MdOutlineSportsCricket size={30}/> },
+  { id: 6, title: "photographers", icon: <HiOutlineLightBulb size={30}/> },
+  { id: 7, title: "podcasters", icon: <IoIosCheckmarkCircle size={30}/> },
+  { id: 8, title: "social media managers", icon: <IoIosCheckmarkCircle size={30}/> },
+  { id: 9, title: "streamers", icon: <IoIosCheckmarkCircle size={30}/> },
+  { id: 10, title: "videographers", icon: <IoIosCheckmarkCircle size={30}/> },
+  { id: 11, title: "vloggers", icon: <IoIosCheckmarkCircle size={30}/> },
+];
+
+const profiles: Profile[] = [
+  { id: 1, name: "Alice Johnson", username: "alice_j", bio: "Blogger and content creator", avatarUrl: "https://via.placeholder.com/150", followers: 1200, following: 300, role: "bloggers" },
+  { id: 2, name: "Bob Smith", username: "bob_smith", bio: "Brand ambassador for tech companies", avatarUrl: "https://via.placeholder.com/150", followers: 3400, following: 400, role: "brand ambassadors" },
+  { id: 3, name: "Clara Lee", username: "clara_lee", bio: "Freelance copywriter", avatarUrl: "https://via.placeholder.com/150", followers: 2300, following: 350, role: "copywriters" },
+  { id: 4, name: "David Kim", username: "david_kim", bio: "Graphic designer with 5 years of experience", avatarUrl: "https://via.placeholder.com/150", followers: 5400, following: 450, role: "graphic designers" },
+  { id: 5, name: "Ella Brown", username: "ella_brown", bio: "Influencer in the beauty industry", avatarUrl: "https://via.placeholder.com/150", followers: 7500, following: 500, role: "influencers" },
+];
+
+const Explore = () => {
+  const [selectedRole, setSelectedRole] = useState("All");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleRoleSelect = (role: Role) => {
+    setSelectedRole(role.title);
+    setIsDropdownOpen(false);
+  };
+
+  const filteredProfiles = selectedRole === "All"
+    ? profiles
+    : profiles.filter(profile => profile.role === selectedRole);
+
+  return (
+    <div className="flex flex-col items-center py-8 bg-gray-900 text-white">
+      <div className="w-[85%] max-w-3xl border border-gray-700 bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+        <div className="border-b p-6 bg-gray-700">
+          <h6 className="text-lg font-semibold text-white">How the Platform Works</h6>
+        </div>
+        <div className="p-6">
+          <div className="relative flex flex-col space-y-4">
+            {platformSteps.map(step => (
+              <div key={step.id} className="relative flex items-start space-x-4">
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 text-white font-semibold">
+                  {step.id}
+                </span>
+                <div>
+                  <h6 className="text-sm font-semibold text-white">{step.title}</h6>
+                  <p className="text-xs text-gray-400">{step.date}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="w-[85%] max-w-3xl mt-8 bg-gray-800 rounded-lg border border-gray-700 py-2 px-3 shadow-md relative">
+        <button
+          onClick={handleDropdownToggle}
+          className="block w-full bg-blue-500 text-white py-2 px-4 rounded-md text-sm font-medium flex items-center justify-between"
+        >
+          {selectedRole}
+          <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        {isDropdownOpen && (
+          <div className="absolute right-0 mt-2 w-full bg-gray-800 border border-gray-700 rounded-md shadow-lg z-10">
+            {roles.map(role => (
+              <button
+                key={role.id}
+                className={`flex items-center w-full text-left px-4 py-2 text-sm font-medium text-gray-200 hover:bg-gray-700 ${selectedRole === role.title ? 'bg-gray-700' : ''}`}
+                onClick={() => handleRoleSelect(role)}
+              >
+                <span className="mr-2">{role.icon}</span>
+                {role.title}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="w-[85%] mt-7 max-w-3xl  bg-[#111827] rounded-lg shadow-lg overflow-hidden">
+        {filteredProfiles.map(profile => (
+          <ProfileCard
+            key={profile.id}
+            name={profile.name}
+            username={profile.username}
+            bio={profile.bio}
+            avatarUrl={profile.avatarUrl}
+            followers={profile.followers}
+            following={profile.following}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Explore;

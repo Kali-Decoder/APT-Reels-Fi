@@ -209,7 +209,7 @@ a {
 }
 
 .stories {
-  margin-top: 14px;
+  margin-top: 24px;
   padding: 0 10px;
   white-space: nowrap;
   overflow-x: auto;
@@ -248,7 +248,7 @@ a {
   text-align: center;
   font-size: 10px;
   margin-top: 2px;
-  color: #444;
+  color: #fff;
 }
 
 .tabs {
@@ -291,7 +291,7 @@ a {
   left: 50%;
   transform: translatex(-50%);
   z-index: 1;
-  background: white;
+  background: #111827;
   display: flex;
   justify-content: space-around;
   align-items: center;
