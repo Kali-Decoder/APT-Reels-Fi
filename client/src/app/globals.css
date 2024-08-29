@@ -8,7 +8,9 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-
+body{
+  background-color: #111827 !important;
+}
 @font-face {
   font-family: Freight-sans;
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2053557/Freight%20Sans%20Medium.otf");
@@ -414,4 +416,123 @@ a {
   font-size: 0.8rem;
   color: var(--secod-font-color);
   cursor: pointer;
+}
+
+
+.grid-cols-auto-1fr-auto {
+  grid-template-columns: auto 1fr auto;
+}
+
+#profile-progress {
+  border: 1em solid white;
+  border-right-color: #4a00e0;
+  border-top-color: #4a00e0;
+  border-bottom-color: #4a00e0;
+  animation: thickening 1s 0.5s linear normal;
+  border-left-color: white;
+  border-radius: 50%;
+}
+
+@keyframes thickening {
+  from {
+    border-width: 0.2em;
+  }
+  to {
+    border-width: 1em;
+  }
+}
+
+
+.slider {
+  position: relative;
+  width: 350px;
+}
+
+.slider__track,
+.slider__range,
+.slider__left-value,
+.slider__right-value {
+  position: absolute;
+}
+
+.slider__track,
+.slider__range {
+  border-radius: 3px;
+  height: 5px;
+}
+
+.slider__track {
+  background-color: #ced4da;
+  width: 100%;
+  z-index: 1;
+}
+
+.slider__range {
+  background-color: #9fe5e1;
+  z-index: 2;
+}
+
+.slider__left-value,
+.slider__right-value {
+  color: #dee2e6;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.slider__left-value {
+  left: 6px;
+}
+
+.slider__right-value {
+  right: -4px;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: 200px;
+  outline: none;
+}
+
+.thumb--left {
+  z-index: 3;
+}
+
+.thumb--right {
+  z-index: 4;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+  background-color: #f1f5f7;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+  background-color: #f1f5f7;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
 }

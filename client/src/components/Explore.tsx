@@ -30,12 +30,12 @@ interface Profile {
 }
 
 const platformSteps: PlatformStep[] = [
-  { id: 'A', title: "Design changes", date: "22 DEC 7:20 PM" },
-  { id: 'B', title: "New order #1832412", date: "21 DEC 11 PM" },
-  { id: 'C', title: "Server payments for April", date: "21 DEC 9:34 PM" },
-  { id: 'D', title: "Server payments for April", date: "21 DEC 9:34 PM" },
-  { id: 'E', title: "Server payments for April", date: "21 DEC 9:34 PM" },
-  { id: 'F', title: "Server payments for April", date: "21 DEC 9:34 PM" }
+  { id: 'A', title: "Make your Account", date: "22 DEC 7:20 PM" },
+  { id: 'B', title: "Scroll Your Feeds", date: "21 DEC 11 PM" },
+  { id: 'C', title: "Explore Content Creator Profile", date: "21 DEC 9:34 PM" },
+  { id: 'D', title: "Invest Your Amount", date: "21 DEC 9:34 PM" },
+  { id: 'E', title: "Wait for Engagement", date: "21 DEC 9:34 PM" },
+  { id: 'F', title: "Claim your Yield . That's It", date: "21 DEC 9:34 PM" }
 ];
 
 const roles: Role[] = [
@@ -54,7 +54,7 @@ const roles: Role[] = [
 ];
 
 const profiles: Profile[] = [
-  { id: 1, name: "Alice Johnson", username: "alice_j", bio: "Blogger and content creator", avatarUrl: "https://via.placeholder.com/150", followers: 1200, following: 300, role: "bloggers" },
+  { id: 1, name: "Alice Johnson", username: "alice_j", bio: "Blogger and content creator", avatarUrl: "", followers: 1200, following: 300, role: "bloggers" },
   { id: 2, name: "Bob Smith", username: "bob_smith", bio: "Brand ambassador for tech companies", avatarUrl: "https://via.placeholder.com/150", followers: 3400, following: 400, role: "brand ambassadors" },
   { id: 3, name: "Clara Lee", username: "clara_lee", bio: "Freelance copywriter", avatarUrl: "https://via.placeholder.com/150", followers: 2300, following: 350, role: "copywriters" },
   { id: 4, name: "David Kim", username: "david_kim", bio: "Graphic designer with 5 years of experience", avatarUrl: "https://via.placeholder.com/150", followers: 5400, following: 450, role: "graphic designers" },
@@ -93,7 +93,7 @@ const Explore = () => {
                 </span>
                 <div>
                   <h6 className="text-sm font-semibold text-white">{step.title}</h6>
-                  <p className="text-xs text-gray-400">{step.date}</p>
+           
                 </div>
               </div>
             ))}
@@ -101,10 +101,10 @@ const Explore = () => {
         </div>
       </div>
 
-      <div className="w-[85%] max-w-3xl mt-8 bg-gray-800 rounded-lg border border-gray-700 py-2 px-3 shadow-md relative">
+      <div className="w-[85%] max-w-3xl mt-8 bg-transparent rounded-lg  shadow-md relative">
         <button
           onClick={handleDropdownToggle}
-          className="block w-full bg-blue-500 text-white py-2 px-4 rounded-md text-sm font-medium flex items-center justify-between"
+          className="block w-full bg-blue-500 text-white py-4 px-4 rounded-md text-sm font-medium flex items-center justify-between"
         >
           {selectedRole}
           <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
