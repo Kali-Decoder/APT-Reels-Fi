@@ -1,3 +1,4 @@
+import { useDataContext } from '@/context/DataContext';
 import React from 'react';
 
 interface ProfileCardProps {
@@ -17,11 +18,14 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   followers,
   following,
 }) => {
+
+  const {setTab} = useDataContext();
   return (
     <div className="flex flex-col items-center p-6 bg-gray-800 border border-gray-700 rounded-lg shadow-md max-w-xs mx-auto mb-6">
       <img
         src={avatarUrl}
         alt={`${name}'s avatar`}
+        onClick={()=>setTab("profile")} 
         className="w-16 h-16 rounded-full mb-4 object-cover"
       />
       <h3 className="text-lg font-semibold text-white">{name}</h3>
